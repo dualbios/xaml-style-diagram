@@ -1,0 +1,30 @@
+<idea-plugin>
+  <id>com.kDg.xamlStyleDiagram</id>
+  <name>Xaml Styles Diagram</name>
+  <vendor>kDg</vendor>
+  <description>Display diagram of XAML styles in the file</description>
+  <idea-version since-build="RS-253.0" until-build="RS-253.*"/>
+  <depends>com.intellij.modules.platform</depends>
+  <actions>
+    <action
+      id="com.kDg.xamlStyleDiagram.ShowStyleDiagramAction"
+      class="com.kDg.xamlStyleDiagram.ShowStyleDiagramAction"
+      text="kDg Xaml Style Diagram"
+      description="Generate SVG diagram and open Style Diagram tool window">
+      <add-to-group group-id="ProjectViewPopupMenu"
+                    anchor="last"/>
+    </action>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow
+      id="Xaml Style Diagram"
+      anchor="right"
+      factoryClass="com.kDg.xamlStyleDiagram.SvgToolWindowFactory"
+      canCloseContents="false"/>
+    <applicationConfigurable
+      instance="com.kDg.xamlStyleDiagram.StyleDiagramSettingsConfigurable"
+      displayName="XAML Style Diagram Settings"/>
+  </extensions>
+
+</idea-plugin>

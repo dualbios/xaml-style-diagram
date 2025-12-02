@@ -1,0 +1,62 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "2.2.20"
+    id "org.jetbrains.intellij" version "1.17.3"
+}
+
+buildDir = "gradle-build"
+version = PluginVersion
+
+// --- Kotlin JVM Target 17
+kotlin {
+    jvmToolchain(17)
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+// --- Java compatibility 17
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+// --- Source sets
+sourceSets {
+    main {
+        java.srcDirs = ["src/rider/main/kotlin"]
+        resources.srcDirs = ["src/rider/main/resources"]
+    }
+}
+
+// --- Repositories
+repositories {
+    mavenCentral()
+}
+
+// --- Rider SDK configuration
+intellij {
+//    type = "RD"
+    type = "RIDER"
+    localPath = "C:\\Program Files\\JetBrains\\JetBrains Rider 2024.3.7"
+    plugins = [] // ❌ Ніяких com.intellij.java
+}
+
+// --- Disable searchable options
+tasks.buildSearchableOptions {
+    enabled = false
+}
+
+// --- Gradle wrapper
+wrapper {
+    gradleVersion = "8.13"
+    distributionType = Wrapper.DistributionType.ALL
+}
+
+patchPluginXml {
+    sinceBuild = "RS-253.0"
+    untilBuild = "RS-253.*"
+}
+

@@ -1,4 +1,4 @@
-![alt text](src/rider/main/resources/META-INF/pluginIcon.svg "Title")
+<img width="128" src="src/rider/main/resources/META-INF/pluginIcon.svg" alt="icon" title="icon" />
 
 # Rider XAML Style Dependency Visualizer {kDg}
 
@@ -10,6 +10,8 @@ This repository contains a JetBrains Rider plugin that analyzes dependencies bet
 - Generates dependency diagrams using PlantUML
 - Integrates directly into Rider for seamless workflow
 - Possibility to zoom and pan the generated diagram for better navigation
+
+<img width="450" alt="Image" src="https://github.com/user-attachments/assets/9bd4e4e4-113c-4d79-832e-dcb6c56b4508" />
 
 ## Requirements
 
@@ -23,6 +25,8 @@ This repository contains a JetBrains Rider plugin that analyzes dependencies bet
 3. Tools -> kDg Xaml Style Diagram.
 4. The diagram opens in the Xaml Style Diagram tool window (main menu → View → Tool Windows).
 
+<img width="500" alt="Image" src="https://github.com/user-attachments/assets/45f721fd-421c-483f-977d-dec8f7d61327" />
+
 ## Configuration
 
 Configure the plugin in settings by specifying:
@@ -32,4 +36,5 @@ Configure the plugin in settings by specifying:
 
 ## License
 
-MIT
+[MIT LICENSE](./LICENSE)
+

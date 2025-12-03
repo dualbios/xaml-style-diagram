@@ -3,7 +3,7 @@
   <name>Xaml Styles Diagram</name>
   <vendor>kDg</vendor>
   <description>Display diagram of XAML styles in the file</description>
-  <idea-version since-build="RS-253.0" until-build="RS-253.*"/>
+  <idea-version since-build="243" />
   <depends>com.intellij.modules.platform</depends>
   <actions>
     <action

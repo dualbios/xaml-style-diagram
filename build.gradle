@@ -38,9 +38,9 @@ repositories {
 
 // --- Rider SDK configuration
 intellij {
-//    type = "RD"
     type = "RIDER"
     localPath = "C:\\Program Files\\JetBrains\\JetBrains Rider 2024.3.7"
+    updateSinceUntilBuild = false
     plugins = [] // ❌ Ніяких com.intellij.java
 }
 
@@ -56,7 +56,12 @@ wrapper {
 }
 
 patchPluginXml {
-    sinceBuild = "RS-253.0"
-    untilBuild = "RS-253.*"
+    sinceBuild = "243"
+    untilBuild = null
 }
+
+tasks.runPluginVerifier {
+    enabled = false
+}
+
 

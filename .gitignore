@@ -350,3 +350,4 @@ build/classes/
 /test/data/NuGetLocks/
 /.idea/
 /gradle/wrapper/
+/build/
